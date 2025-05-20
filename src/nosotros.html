@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/output.css" rel="stylesheet">
+    <title>Nosotros</title>
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-white to-red-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow pb-2">
+        <!-- NAV PARA PC -->
+        <nav class="hidden md:flex max-w-7xl mx-auto px-6 h-16 items-center gap-6">
+            <div class="flex items-center gap-2">
+                <a href="index.html">
+                    <img src="/src/assets/logo.png" alt="Logo" class="h-10">
+                </a>
+                <span class="font-bold text-lg text-black">D<span class="text-blue-500">surti</span><span class="text-red-500">endo</span></span>
+            </div>
+            <a href="/src/nosotros.html" class="flex items-center gap-1 text-gray-700 hover:text-blue-600 font-medium">
+                <span class="material-icons text-base">info</span>
+                Nosotros
+            </a>
+            <a href="/src/perfil.html" class="flex items-center gap-1 text-gray-700 hover:text-blue-600 font-medium">
+                <span class="material-icons text-base">person</span>
+                Perfil
+            </a>
+            <div class="flex-1 flex items-center justify-center">
+                <input id="search" type="text" placeholder="Buscar..." class="border px-3 py-2 rounded-full w-full max-w-xs focus:outline-none focus:border-blue-400 transition" />
+            </div>
+            <button id="cartBtn" class="relative text-2xl text-blue-600 ml-2 flex flex-col items-center">
+                <span class="material-icons text-2xl">shopping_cart</span>
+                <span class="absolute -top-1 -right-2 bg-red-500 text-white rounded-full text-xs px-1" id="cartCount">0</span>
+            </button>
+        </nav>
+        <!-- NAV PARA MÓVIL -->
+        <div class="md:hidden">
+            <div class="flex items-center justify-between px-4 pt-4">
+                <div class="flex items-center gap-2">
+                    <a href="/src/index.html">
+                        <img src="/src/assets/logo.png" alt="Logo" class="h-10">
+                    </a>
+                    <span class="font-bold text-lg text-black">D<span class="text-blue-500">surti</span><span class="text-red-500">endo</span></span>
+                </div>
+            </div>
+            <div class="w-full text-center mt-2">
+                <span class="font-semibold text-lg text-gray-700">¡Precios de tienda en la puerta de tu casa!</span>
+            </div>
+            <div class="flex justify-center mt-4 px-4">
+                <div class="relative w-full max-w-md">
+                    <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                        <span class="material-icons">search</span>
+                    </span>
+                    <input id="search" type="text" placeholder="Buscar..." class="pl-10 pr-4 py-2 w-full rounded-full border border-gray-300 focus:outline-none focus:border-blue-400 transition" />
+                </div>
+            </div>
+            <nav class="flex justify-center gap-8 mt-4">
+                <a href="/src/nosotros.html" class="flex flex-col items-center text-gray-700 hover:text-blue-600 font-medium text-sm">
+                    <span class="material-icons text-2xl">info</span>
+                    nosotros
+                </a>
+                <a href="/src/perfil.html" class="flex flex-col items-center text-gray-700 hover:text-blue-600 font-medium text-sm">
+                    <span class="material-icons text-2xl">person</span>
+                    perfil
+                </a>
+                <button id="cartBtn" class="flex flex-col items-center text-blue-600 font-medium text-sm relative">
+                    <span class="material-icons text-2xl">shopping_cart</span>
+                    carrito<span class="absolute -top-1 -right-2 bg-red-500 text-white rounded-full text-xs px-1" id="cartCount">0</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <!-- Contenido principal -->
+    <main class="max-w-4xl mx-auto px-4 py-12">
+        <h1 class="text-4xl font-extrabold mb-6 text-center text-blue-700 drop-shadow">Sobre Nosotros</h1>
+        <p class="text-lg text-gray-700 mb-10 text-center max-w-2xl mx-auto">
+            Somos <span class="font-bold text-blue-600">Dsurtiendo</span>, tu tienda de surtido a domicilio. Ofrecemos productos de calidad a precios de tienda, entregados directamente en la puerta de tu casa. Nuestro objetivo es facilitar tus compras y brindarte la mejor experiencia posible.
+        </p>
+        <div class="grid md:grid-cols-2 gap-10">
+            <!-- Misión -->
+            <div class="bg-white border-t-4 border-blue-400 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <div class="flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 mb-4 shadow">
+                    <span class="material-icons text-blue-600 text-4xl">flag</span>
+                </div>
+                <h2 class="text-2xl font-bold text-blue-700 mb-3 tracking-wide">Misión</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    Brindar a nuestros clientes una experiencia de compra fácil, rápida y segura, llevando productos de calidad y precios justos hasta la puerta de su hogar, con un servicio amable y eficiente.
+                </p>
+            </div>
+            <!-- Visión -->
+            <div class="bg-white border-t-4 border-red-400 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <div class="flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4 shadow">
+                    <span class="material-icons text-red-500 text-4xl">visibility</span>
+                </div>
+                <h2 class="text-2xl font-bold text-red-600 mb-3 tracking-wide">Visión</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    Ser la tienda de surtido a domicilio líder en la región, reconocida por la confianza, innovación y excelencia en el servicio, mejorando la calidad de vida de nuestros clientes y sus familias.
+                </p>
+            </div>
+        </div>
+        <p class="text-gray-600 mt-12 text-center text-lg font-semibold">
+            ¡Gracias por confiar en <span class="text-blue-600">Dsurtiendo</span>!
+        </p>
+    </main>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/output.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow pb-2">
+        <!-- NAV PARA PC -->
+        <nav class="hidden md:flex max-w-7xl mx-auto px-6 h-16 items-center gap-6">
+            <div class="flex items-center gap-2">
+                <a href="index.html">
+                    <img src="/src/assets/logo.png" alt="Logo" class="h-10">
+                </a>
+                <span class="font-bold text-lg text-black">D<span class="text-blue-500">surti</span><span class="text-red-500">endo</span></span>
+            </div>
+            <a href="/src/nosotros.html" class="flex items-center gap-1 text-gray-700 hover:text-blue-600 font-medium">
+                <span class="material-icons text-base">info</span>
+                Nosotros
+            </a>
+            <a href="/src/perfil.html" class="flex items-center gap-1 text-gray-700 hover:text-blue-600 font-medium">
+                <span class="material-icons text-base">person</span>
+                Perfil
+            </a>
+            <div class="flex-1 flex items-center justify-center">
+                <input id="search" type="text" placeholder="Buscar..." class="border px-3 py-2 rounded-full w-full max-w-xs focus:outline-none focus:border-blue-400 transition" />
+            </div>
+            <button id="cartBtn" class="relative text-2xl text-blue-600 ml-2 flex flex-col items-center">
+                <span class="material-icons text-2xl">shopping_cart</span>
+                <span class="absolute -top-1 -right-2 bg-red-500 text-white rounded-full text-xs px-1" id="cartCount">0</span>
+            </button>
+        </nav>
+        <!-- NAV PARA MÓVIL -->
+        <div class="md:hidden">
+            <div class="flex items-center justify-between px-4 pt-4">
+                <div class="flex items-center gap-2">
+                <a href="index.html">
+                        <img src="/src/assets/logo.png" alt="Logo" class="h-10">
+                    </a>
+                    <span class="font-bold text-lg text-black">D<span class="text-blue-500">surti</span><span class="text-red-500">endo</span></span>
+                </div>
+            </div>
+            <div class="w-full text-center mt-2">
+                <span class="font-semibold text-lg text-gray-700">¡Precios de tienda en la puerta de tu casa!</span>
+            </div>
+            <div class="flex justify-center mt-4 px-4">
+                <div class="relative w-full max-w-md">
+                    <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                        <span class="material-icons">search</span>
+                    </span>
+                    <input id="searchMobile" type="text" placeholder="Buscar..." class="pl-10 pr-4 py-2 w-full rounded-full border border-gray-300 focus:outline-none focus:border-blue-400 transition" />
+                </div>
+            </div>
+            <nav class="flex justify-center gap-8 mt-4">
+                <a href="/src/nosotros.html" class="flex flex-col items-center text-gray-700 hover:text-blue-600 font-medium text-sm">
+                    <span class="material-icons text-2xl">info</span>
+                    nosotros
+                </a>
+                <a href="/src/perfil.html" class="flex flex-col items-center text-gray-700 hover:text-blue-600 font-medium text-sm">
+                    <span class="material-icons text-2xl">person</span>
+                    perfil
+                </a>
+                <button id="cartBtnMobile" class="flex flex-col items-center text-blue-600 font-medium text-sm relative">
+                    <span class="material-icons text-2xl">shopping_cart</span>
+                    carrito<span class="absolute -top-1 -right-2 bg-red-500 text-white rounded-full text-xs px-1" id="cartCountMobile">0</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Productos -->
+    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-8 py-8">
+        <!-- Producto 1 -->
+        <div class="bg-white rounded-2xl shadow-xl p-7 flex flex-col items-center hover:bg-blue-50 transition" data-id="1">
+            <img src="/src/assets/producto1.jpg" alt="Producto" class="h-36 mb-4">
+            <h2 class="font-bold text-center mb-2">Arroz Diana 500g</h2>
+            <p class="text-xl font-bold mb-1">$ 2.500</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded mt-2 addCart">Añadir al carrito</button>
+        </div>
+        <!-- Producto 2 -->
+        <div class="bg-white rounded-2xl shadow-xl p-7 flex flex-col items-center hover:bg-blue-50 transition" data-id="2">
+            <img src="/src/assets/producto1.jpg" alt="Producto" class="h-36 mb-4">
+            <h2 class="font-bold text-center mb-2">Aceite Premier 1L</h2>
+            <p class="text-xl font-bold mb-1">$ 7.000</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded mt-2 addCart">Añadir al carrito</button>
+        </div>
+        <!-- Producto 3 -->
+        <div class="bg-white rounded-2xl shadow-xl p-7 flex flex-col items-center hover:bg-blue-50 transition" data-id="3">
+            <img src="/src/assets/producto1.jpg" alt="Producto" class="h-36 mb-4">
+            <h2 class="font-bold text-center mb-2">Azúcar Incauca 1kg</h2>
+            <p class="text-xl font-bold mb-1">$ 4.200</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded mt-2 addCart">Añadir al carrito</button>
+        </div>
+        <!-- Producto 4 -->
+        <div class="bg-white rounded-2xl shadow-xl p-7 flex flex-col items-center hover:bg-blue-50 transition" data-id="4">
+            <img src="/src/assets/producto1.jpg" alt="Producto" class="h-36 mb-4">
+            <h2 class="font-bold text-center mb-2">Sal Refisal 500g</h2>
+            <p class="text-xl font-bold mb-1">$ 1.000</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded mt-2 addCart">Añadir al carrito</button>
+        </div>
+        <!-- Producto 5 -->
+        <div class="bg-white rounded-2xl shadow-xl p-7 flex flex-col items-center hover:bg-blue-50 transition" data-id="5">
+            <img src="/src/assets/producto1.jpg" alt="Producto" class="h-36 mb-4">
+            <h2 class="font-bold text-center mb-2">Frijol Rojo 500g</h2>
+            <p class="text-xl font-bold mb-1">$ 3.800</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded mt-2 addCart">Añadir al carrito</button>
+        </div>
+        <!-- Producto 6 -->
+        <div class="bg-white rounded-2xl shadow-xl p-7 flex flex-col items-center hover:bg-blue-50 transition" data-id="6">
+            <img src="/src/assets/producto1.jpg" alt="Producto" class="h-36 mb-4">
+            <h2 class="font-bold text-center mb-2">Lenteja 500g</h2>
+            <p class="text-xl font-bold mb-1">$ 3.500</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded mt-2 addCart">Añadir al carrito</button>
+        </div>
+        <!-- Producto 7 -->
+        <div class="bg-white rounded-2xl shadow-xl p-7 flex flex-col items-center hover:bg-blue-50 transition" data-id="7">
+            <img src="/src/assets/producto1.jpg" alt="Producto" class="h-36 mb-4">
+            <h2 class="font-bold text-center mb-2">Pasta Doria 250g</h2>
+            <p class="text-xl font-bold mb-1">$ 2.000</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded mt-2 addCart">Añadir al carrito</button>
+        </div>
+        <!-- Producto 8 -->
+        <div class="bg-white rounded-2xl shadow-xl p-7 flex flex-col items-center hover:bg-blue-50 transition" data-id="8">
+            <img src="/src/assets/producto1.jpg" alt="Producto" class="h-36 mb-4">
+            <h2 class="font-bold text-center mb-2">Café Sello Rojo 250g</h2>
+            <p class="text-xl font-bold mb-1">$ 6.500</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded mt-2 addCart">Añadir al carrito</button>
+        </div>
+    </main>
+
+    <!-- Carrito Modal -->
+    <div id="cartModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl shadow-lg w-96 p-6 relative">
+            <button id="closeCart" class="absolute top-2 right-2 text-gray-400 hover:text-red-500 text-2xl">&times;</button>
+            <h2 class="text-xl font-bold mb-4">Carrito de compras</h2>
+            <ul id="cartItems" class="mb-4"></ul>
+            <div class="flex justify-between font-bold text-lg">
+                <span>Total:</span>
+                <span id="cartTotal">$0</span>
+            </div>
+            <button class="w-full mt-4 bg-blue-600 text-white py-2 rounded font-bold hover:bg-blue-700">Finalizar compra</button>
+        </div>
+    </div>
+
+    <!-- Iconos Material -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Script carrito -->
+    <script src="./js/index.js"></script>
+    <script>
+        // Responsive nav toggle mejorado
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.getElementById('navToggle');
+            const navMobile = document.getElementById('navMobile');
+            const navClose = document.getElementById('navClose');
+            // Abrir menú móvil
+            if (navToggle && navMobile) {
+                navToggle.addEventListener('click', () => {
+                    navMobile.classList.remove('hidden');
+                });
+            }
+            // Cerrar menú móvil
+            if (navClose && navMobile) {
+                navClose.addEventListener('click', () => {
+                    navMobile.classList.add('hidden');
+                });
+            }
+            // Cerrar menú móvil al hacer click fuera del panel
+            navMobile && navMobile.addEventListener('click', (e) => {
+                if (e.target === navMobile) navMobile.classList.add('hidden');
+            });
+            // Cerrar menú móvil al hacer click en un enlace
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMobile.classList.add('hidden');
+                });
+            });
+            // Sincronizar el buscador y el carrito en móvil
+            const search = document.getElementById('search');
+            const searchMobile = document.getElementById('searchMobile');
+            if (search && searchMobile) {
+                searchMobile.addEventListener('input', () => {
+                    search.value = searchMobile.value;
+                });
+                search.addEventListener('input', () => {
+                    searchMobile.value = search.value;
+                });
+            }
+            // Carrito en móvil
+            const cartBtn = document.getElementById('cartBtn');
+            const cartBtnMobile = document.getElementById('cartBtnMobile');
+            if (cartBtn && cartBtnMobile) {
+                cartBtnMobile.addEventListener('click', () => {
+                    cartBtn.click();
+                });
+            }
+        });
+        // Sincroniza buscador y carrito entre móvil y desktop
+        document.addEventListener('DOMContentLoaded', () => {
+            // Sincronizar buscador
+            const search = document.getElementById('search');
+            const searchMobile = document.getElementById('searchMobile');
+            if (search && searchMobile) {
+                searchMobile.addEventListener('input', () => {
+                    search.value = searchMobile.value;
+                });
+                search.addEventListener('input', () => {
+                    searchMobile.value = search.value;
+                });
+            }
+            // Sincronizar botón carrito
+            const cartBtn = document.getElementById('cartBtn');
+            const cartBtnMobile = document.getElementById('cartBtnMobile');
+            if (cartBtn && cartBtnMobile) {
+                cartBtnMobile.addEventListener('click', () => {
+                    cartBtn.click();
+                });
+            }
+            // Sincronizar contador carrito
+            const cartCount = document.getElementById('cartCount');
+            const cartCountMobile = document.getElementById('cartCountMobile');
+            if (cartCount && cartCountMobile) {
+                const observer = new MutationObserver(() => {
+                    cartCountMobile.textContent = cartCount.textContent;
+                });
+                observer.observe(cartCount, { childList: true });
+            }
+        });
+    </script>
+</body>
+</html>
